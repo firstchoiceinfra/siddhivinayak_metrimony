@@ -12,3 +12,4 @@ pyswisseph
 pytesseract
 opencv-python-headless
 boto3
+cryptography

@@ -1,2 +1,20 @@
+# Put this file in your GitHub repo as  .streamlit/config.toml  (next to app.py)
+
 [server]
-enableStaticServing = true
+# Compress the data sent to the phone/browser (smaller = faster on mobile networks).
+enableWebsocketCompression = true
+# No file-watching in production (saves CPU). Restart/redeploy the app after code changes.
+fileWatcherType = "none"
+
+[client]
+# Don't show users a full Python traceback. "type" still shows the error class so you can debug.
+showErrorDetails = "type"
+toolbarMode = "minimal"
+
+[browser]
+gatherUsageStats = false
+
+[runner]
+# Our code has no "magic" bare expressions, so skip that source rewriting.
+magicEnabled = false
+fastReruns = true

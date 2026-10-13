@@ -1,15 +1,17 @@
-streamlit
-Pillow
+# Core (required)
+streamlit>=1.40
+pymongo
+bcrypt
+requests
 pandas
 numpy
-pymongo
-dnspython
-requests
-bcrypt
-agora-token-builder
-ffmpeg
-pyswisseph
-pytesseract
-opencv-python-headless
-boto3
-cryptography
+Pillow
+cryptography        # encrypts Aadhaar / ID files (needs the DATA_ENCRYPTION_KEY secret)
+
+# Used when the matching feature/secret is configured (imports are guarded in the code)
+boto3               # S3 / Cloudflare R2 storage for photos & videos
+pyswisseph          # Kundli / Guna Milan calculations
+agora-token-builder # in-app video calls
+altair              # charts (already installed with streamlit)
+# opencv-python-headless   # optional: face / video-length helpers (large download)
+# pytesseract              # optional: ID text reading (also needs the tesseract program installed)

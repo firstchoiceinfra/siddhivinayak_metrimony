@@ -18,3 +18,7 @@ gatherUsageStats = false
 # Our code has no "magic" bare expressions, so skip that source rewriting.
 magicEnabled = false
 fastReruns = true
+Put this file in your repo as:  .streamlit/config.toml
+# It makes Streamlit always use its LIGHT theme, even when the phone/browser is in dark mode.
+[theme]
+base = "light
